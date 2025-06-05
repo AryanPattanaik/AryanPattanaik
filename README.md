@@ -1,7 +1,9 @@
 <h1 align="center">Hi 👋, I'm Aryan Pattanaik</h1>
-<h3 align="center">A Gamer, Passionate Programmer who is also addicted to movies.</h3>
+<h3 align="center">Just A Chill Guy.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=aryanpattanaik&label=Profile%20views&color=00ff04&style=flat" alt="aryanpattanaik" /> </p>
+
+- ⭐ Hobbies: **Passionate about video games, movie enthusiast, and occasional novel reader.**
 
 - 🌱 I’m currently learning **Javascript, CSS, HTML, Node, React, PostgreSQL**
 
@@ -9,7 +11,7 @@
 
 - 📫 Reach me at **thearyanpattanaik@proton.me**
 
-- ⚡ Fun fact **Movies show you stories; games let you live them! 🎬➡️🎮**
+- ⚡ Fun fact: **Movies show you stories; games let you live them! 🎬➡️🎮**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
