@@ -9,7 +9,7 @@
 
 - 📫 Reach me at **thearyanpattanaik@proton.me**
 
-- ⚡ Fun fact **Movies show you stories; games let you live them! 🎬➡️🎮**
+- ⚡ Fun fact: **Movies show you stories; games let you live them! 🎬➡️🎮**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
