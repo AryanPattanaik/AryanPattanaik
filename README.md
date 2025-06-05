@@ -25,6 +25,8 @@
 
 ![DISCORD](https://discord.c99.nl/widget/theme-4/501027770265239572.png)
 
+<h3 allign="left">My Stats:</h3>
+
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=aryanpattanaik&show_icons=true&locale=en&layout=compact&theme=midnight-purple" alt="aryanpattanaik" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=aryanpattanaik&show_icons=true&locale=en&theme=midnight-purple" alt="aryanpattanaik" /></p>
