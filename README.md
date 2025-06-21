@@ -15,7 +15,7 @@
 
 - 🙋‍♂️ About Me: **Can't live without StackOverflow and ChatGPT**
 
-- 🎂 **I am {{AGE}} old**. *(updated daily by GitHub Actions)*
+- 🎂 **I am 17 years, 11 months, 17 days old**. *(updated daily by GitHub Actions)*
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
