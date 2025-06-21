@@ -1,0 +1,40 @@
+name: 🔄 Update Age in README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:      # Also allows manual run from GitHub Actions tab
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Calculate and update age
+        run: |
+          BIRTHDATE="2007-07-05"
+
+          # Calculate current time and birth time in seconds
+          now=$(date -u +%s)
+          birth=$(date -u -d "$BIRTHDATE" +%s)
+          seconds=$((now - birth))
+
+          # Convert to years, months, days
+          years=$((seconds / 31556952))
+          months=$(( (seconds % 31556952) / 2629746 ))
+          days=$(( ((seconds % 31556952) % 2629746) / 86400 ))
+
+          age="${years} years, ${months} months, ${days} days"
+
+          # Replace the line that starts with "- 🎂" in README.md
+          sed -i -E "s|\- 🎂 \*\*I am .* old\.\*\*|\- 🎂 **I am ${age} old.**|" README.md
+
+      - name: Commit and push if changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "🤖 Auto-update age in README" || echo "No changes to commit"
+          git push

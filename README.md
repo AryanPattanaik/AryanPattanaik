@@ -13,7 +13,9 @@
 
 - ⚡ Fun fact: **Movies show you stories; games let you live them! 🎬➡️🎮**
 
-- 🙋‍♂️ About Me: **Cant live without StackOverflow and ChatGPT**
+- 🙋‍♂️ About Me: **Can't live without StackOverflow and ChatGPT**
+
+- 🎂 **I am {{AGE}} old**. *(updated daily by GitHub Actions)*
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
