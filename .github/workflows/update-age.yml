@@ -2,7 +2,7 @@ name: 🔄 Update Age in README
 
 on:
   schedule:
-    - cron: '0 18 * * *'  # Runs daily at 11:30 PM IST
+    - cron: '0 18 * * *'  # Runs daily at 6:00 PM UTC (11:30 PM IST)
   workflow_dispatch:
 
 jobs:
@@ -17,8 +17,9 @@ jobs:
         run: |
           BIRTHDATE="2007-07-05"
           TODAY=$(date +%Y-%m-%d)
+          echo "🕒 Today's date according to GitHub Actions: $TODAY"
 
-          # Calculate the difference using `date` and `awk`
+          # Parse birth and today
           IFS="-" read -r by bm bd <<< "$BIRTHDATE"
           IFS="-" read -r ty tm td <<< "$TODAY"
 
@@ -28,7 +29,14 @@ jobs:
 
           if ((days < 0)); then
             months=$((months - 1))
-            days=$((days + $(cal $((tm-1 == 0 ? 12 : tm-1)) $((tm-1 == 0 ? ty-1 : ty)) | awk 'NF {DAYS = $NF}; END {print DAYS}')))
+            prev_month=$((tm - 1))
+            prev_year=$ty
+            if ((prev_month == 0)); then
+              prev_month=12
+              prev_year=$((ty - 1))
+            fi
+            days_in_prev_month=$(cal "$prev_month" "$prev_year" | awk 'NF {DAYS = $NF}; END {print DAYS}')
+            days=$((days + days_in_prev_month))
           fi
 
           if ((months < 0)); then
@@ -37,12 +45,10 @@ jobs:
           fi
 
           age="${years} years, ${months} months, ${days} days"
+          echo "📌 Calculated age: $age"
 
-          echo "Calculated age: $age"
-
-          # Replace placeholder in README.md
+          # Replace the placeholder in README.md
           sed -i "s|{{AGE}}|$age|" README.md
-
 
       - name: Commit and push if README changed
         run: |
