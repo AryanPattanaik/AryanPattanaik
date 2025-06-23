@@ -16,19 +16,33 @@ jobs:
       - name: Calculate and update age
         run: |
           BIRTHDATE="2007-07-05"
+          TODAY=$(date +%Y-%m-%d)
 
-          now=$(date -u +%s)
-          birth=$(date -u -d "$BIRTHDATE" +%s)
-          seconds=$((now - birth))
+          # Calculate the difference using `date` and `awk`
+          IFS="-" read -r by bm bd <<< "$BIRTHDATE"
+          IFS="-" read -r ty tm td <<< "$TODAY"
 
-          years=$((seconds / 31556952))
-          months=$(( (seconds % 31556952) / 2629746 ))
-          days=$(( ((seconds % 31556952) % 2629746) / 86400 ))
+          years=$((ty - by))
+          months=$((tm - bm))
+          days=$((td - bd))
+
+          if ((days < 0)); then
+            months=$((months - 1))
+            days=$((days + $(cal $((tm-1 == 0 ? 12 : tm-1)) $((tm-1 == 0 ? ty-1 : ty)) | awk 'NF {DAYS = $NF}; END {print DAYS}')))
+          fi
+
+          if ((months < 0)); then
+            years=$((years - 1))
+            months=$((months + 12))
+          fi
 
           age="${years} years, ${months} months, ${days} days"
 
-          # Replace placeholder
+          echo "Calculated age: $age"
+
+          # Replace placeholder in README.md
           sed -i "s|{{AGE}}|$age|" README.md
+
 
       - name: Commit and push if README changed
         run: |
