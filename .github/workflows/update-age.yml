@@ -2,7 +2,7 @@ name: 🔄 Update Age in README
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 18 * * *'  # Runs daily at 11:30 PM IST
   workflow_dispatch:
 
 jobs:
@@ -27,14 +27,15 @@ jobs:
 
           age="${years} years, ${months} months, ${days} days"
 
+          # Replace placeholder
           sed -i "s|{{AGE}}|$age|" README.md
 
-      - name: Commit and push if changes
+      - name: Commit and push if README changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "🤖 Auto-update age in README" || echo "No changes to commit"
+          git diff --quiet README.md || git commit -m "🤖 Auto-update age in README"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
