@@ -15,6 +15,9 @@ jobs:
 
       - name: Calculate and update age
         run: |
+          # Install dos2unix to normalize Windows line endings
+          sudo apt-get update && sudo apt-get install -y dos2unix
+
           BIRTHDATE="2007-07-05"
           TODAY=$(date +%Y-%m-%d)
           echo "🕒 Today's date according to GitHub Actions: $TODAY"
@@ -47,8 +50,9 @@ jobs:
           age="${years} years, ${months} months, ${days} days"
           echo "📌 Calculated age: $age"
 
-          # Replace the placeholder in README.md
-          sed -i "s|{{AGE}}|$age|" README.md
+          # Normalize line endings and replace {{AGE}}
+          dos2unix README.md
+          sed -i "s|{{AGE}}|$age|g" README.md
 
       - name: Commit and push if README changed
         run: |
