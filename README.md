@@ -15,8 +15,6 @@
 
 - 🙋‍♂️ About Me: **Can't live without StackOverflow and ChatGPT**
 
-- 🎂 **I am {{AGE}} old**. *(updated daily by GitHub Actions)*
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/realmystiq" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="realmystiq" height="30" width="40" /></a>
