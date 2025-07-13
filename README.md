@@ -23,6 +23,8 @@
 <a href="https://linkedin.com/in/aryanpattanaik" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="aryanpattanaik" height="30" width="40" /></a>
 <a href="https://instagram.com/thearyanpattanaik" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="thearyanpattanaik" height="30" width="40" /></a>
 <a href="https://steamcommunity.com/id/realmystiq/" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1024px-Steam_icon_logo.svg.png" alt="realmystiq-steam" height="30" width="30" /></a>
+<a href="https://www.reddit.com/user/RealMystiq/" target="blank">
+  <img align="center" src="https://cdn-icons-png.flaticon.com/512/2111/2111589.png" alt="realmystiq-reddit" height="30" width="30" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
