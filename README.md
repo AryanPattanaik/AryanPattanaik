@@ -58,8 +58,9 @@
 
 <h3 align="left">My Github Stats:</h3>
 
+
 ![AryanPattanaik's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AryanPattanaik&theme=midnight-purple&show_icons=true&hide_border=true&layout=compact)
 
-<p>
-  &nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=aryanpattanaik&show_icons=true&locale=en&theme=midnight-purple" alt="aryanpattanaik" />
-</p>
+
+![AryanPattanaik's Stats](https://github-readme-stats.vercel.app/api?username=AryanPattanaik&theme=midnight-purple&show_icons=true&hide_border=true&count_private=true)
+
